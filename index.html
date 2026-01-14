@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogica - Rođendaonica i igraonica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- Logo image -->
+                <img src="jogica.png" alt="Jogica Logo"> 
+                <h1>Jogica</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#rodendani">Rođendani</a></li>
+                    <li><a href="#igraonica">Igraonica</a></li>
+                    <li><a href="#o-nama">O nama</a></li>
+                    <li><a href="#pravilnik">Pravilnik</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- Dekoracije - Baloni i konfeti -->
+        <div class="decorations">
+            <div class="balloon b-red"></div>
+            <div class="balloon b-blue"></div>
+            <div class="balloon b-yellow"></div>
+            <div class="balloon b-green"></div>
+            <div class="confetti c-1"></div>
+            <div class="confetti c-2"></div>
+            <div class="confetti c-3"></div>
+            <div class="confetti c-4"></div>
+            <div class="confetti c-5"></div>
+        </div>
+
+        <div class="container hero-content">
+            <h2>Dobrodošli u Jogicu!</h2>
+            <p>Mjesto gdje dječji smijeh i dobra energija dolaze prirodno.</p>
+            <a href="#kontakt" class="btn">Rezerviraj termin 🎈</a>
+        </div>
+    </section>
+
+    <section id="rodendani" class="services">
+        <div class="container">
+            <h2 class="section-title">Rođendanske proslave</h2>
+            <p class="section-intro">Naše rođendanske proslave osmišljene su kako bi djeci pružile nezaboravno iskustvo, a roditeljima bezbrižno slavlje uz kompletnu organizaciju.</p>
+
+            <div class="packages-grid">
+                <!-- Paket 1 -->
+                <div class="package-card">
+                    <h3>1. Najam prostora</h3>
+                    <p class="price">190 €</p>
+                    <p class="desc">Idealno za rođendane od 1 do 3 godine. Namijenjeno najmlađima uz obaveznu prisutnost roditelja.</p>
+                    <ul>
+                        <li>Najam prostora na 2 sata</li>
+                        <li>Pribor za jelo za djecu</li>
+                        <li>Osnovne dekoracije</li>
+                        <li>Digitalne pozivnice</li>
+                    </ul>
+                    <p class="note">*Mogućnost nadoplate za hranu i piće.</p>
+                </div>
+
+                <!-- Paket 2 -->
+                <div class="package-card">
+                    <h3>2. Basic Party</h3>
+                    <p class="price">250 €</p>
+                    <p class="desc">Klasična rođendanska proslava uz animatore.</p>
+                    <ul>
+                        <li>2 sata proslave</li>
+                        <li>2 animatorice</li>
+                        <li>Vođene igre i zabavni program</li>
+                        <li>Pizza, grickalice, sokovi, torta</li>
+                        <li>Fotografije s proslave</li>
+                    </ul>
+                    <p class="note">*Do 15 djece (max 20 uz nadoplatu)</p>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="package-card featured">
+                    <h3>3. Sport Party</h3>
+                    <p class="price">270 €</p>
+                    <p class="desc">Program usmjeren na zabavne sportske igre i timski duh.</p>
+                    <ul>
+                        <li>2 sata proslave</li>
+                        <li>2 animatorice</li>
+                        <li>Poligoni i mini turniri</li>
+                        <li>Pizza, grickalice, sokovi, torta</li>
+                        <li>Medalje ili nagrade</li>
+                    </ul>
+                    <p class="note">*Do 15 djece (max 20 uz nadoplatu)</p>
+                </div>
+
+                <!-- Paket 4 -->
+                <div class="package-card">
+                    <h3>4. Disco Party</h3>
+                    <p class="price">270 €</p>
+                    <p class="desc">Prava mala plesna zabava uz glazbu i svjetlosne efekte.</p>
+                    <ul>
+                        <li>2 sata proslave</li>
+                        <li>2 animatorice / DJ-a</li>
+                        <li>Disco rasvjeta i glazba</li>
+                        <li>Pizza, grickalice, sokovi, torta</li>
+                    </ul>
+                </div>
+
+                <!-- Paket 5 -->
+                <div class="package-card">
+                    <h3>5. Tematski Party</h3>
+                    <p class="price">300 €</p>
+                    <p class="desc">Proslava prema želji djeteta (princeze, superjunaci, safari...).</p>
+                    <ul>
+                        <li>2 sata proslave</li>
+                        <li>Tematske dekoracije i 2 animatorice</li>
+                        <li>Pizza, grickalice, sokovi, torta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <h3 class="calc-title">🧮 Brzi Izračun Cijene</h3>
+                <div class="calculator-box">
+                    <div class="calc-row">
+                        <div class="form-group">
+                            <label for="package-select">Odaberi Paket:</label>
+                            <select id="package-select">
+                                <option value="190">1. Najam prostora (190 €)</option>
+                                <option value="250" selected>2. Basic Party (250 €)</option>
+                                <option value="270">3. Sport Party (270 €)</option>
+                                <option value="270">4. Disco Party (270 €)</option>
+                                <option value="300">5. Tematski Party (300 €)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="extra-kids">Dodatna djeca (10€/dijete):</label>
+                            <input type="number" id="extra-kids" min="0" max="10" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="calc-addons">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="20" class="calc-addon">
+                            <span class="checkmark"></span> Dodatna torta (+20 €)
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="10" class="calc-addon">
+                            <span class="checkmark"></span> Dodatna pizza (+10 €)
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="30" class="calc-addon">
+                            <span class="checkmark"></span> Produženje 30 min (+30 €)
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="50" class="calc-addon">
+                            <span class="checkmark"></span> Produženje 1 h (+50 €)
+                        </label>
+                    </div>
+
+                    <div class="total-display">
+                        <span>Ukupno za platiti:</span>
+                        <span id="calc-total">250</span>
+                        <span>€</span>
+                    </div>
+                    <p class="calc-note">*Ovo je informativni izračun. Konačnu ponudu dobivate nakon rezervacije.</p>
+                </div>
+            </div>
+
+            <div class="extras">
+                <h3>Dodaci (Cjenik)</h3>
+                <ul>
+                    <li>Dodatna torta: 20 €</li>
+                    <li>Dodatna pizza: 10 €</li>
+                    <li>Dodatno dijete: 10 €</li>
+                    <li>Produženje 30 min: 30 €</li>
+                    <li>Produženje 1 h: 50 €</li>
+                    <li>Facepainting, dodatni animator, maskota: na upit</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="igraonica" class="playroom">
+        <div class="container">
+            <h2 class="section-title">Ostale Usluge</h2>
+            
+            <div class="service-row">
+                <div class="service-item">
+                    <h3>Slobodna igra</h3>
+                    <p><strong>Ponedjeljak - Četvrtak: 16:00 - 20:00</strong></p>
+                    <p>Cijena: 6 € / sat (2. sat 5 €, brat/sestra 5 €)</p>
+                    <p class="small">* Djeca mlađa od 3 godine uz pratnju roditelja.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Kreativne radionice</h3>
+                    <p>Pratite naše društvene mreže za najave radionica!</p>
+                </div>
+                <div class="service-item coming-soon">
+                    <h3>Družionice za mame i bebe</h3>
+                    <p>USKORO!</p>
+                </div>
+                <div class="service-item coming-soon">
+                    <h3>Ples/vježbanje za djecu</h3>
+                    <p>USKORO!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="o-nama" class="about">
+        <div class="container">
+            <h2 class="section-title">O Nama</h2>
+            <div class="about-content">
+                <p>Rođendaonica i igraonica <strong>Jogica</strong> mjesto je gdje dječji smijeh i dobra energija dolaze prirodno. U našem šarenom, sigurnom i pažljivo uređenom prostoru od 70 m² njegujemo obiteljsku atmosferu u kojoj se djeca osjećaju slobodno, a roditelji opušteno.</p>
+                <p>Imamo poseban kutak za roditelje, a za toplih i sunčanih dana na raspolaganju će biti i dvorište za igru na otvorenom. O djeci brinu vesele i iskusne animatorice koje svako slavlje pretvaraju u nezaboravno iskustvo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Što kažu roditelji? 💬</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <p>"Najbolji rođendan do sada! Animatorice su bile odlične, djeca se nisu prestala smijati puna 2 sata. Svakako se vraćamo!"</p>
+                    <h4>- Mama Ana</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <p>"Prekrasno uređen prostor i jako ugodna atmosfera. Sportski paket je bio pun pogodak za naše dečke. Sve pohvale!"</p>
+                    <h4>- Tata Marko</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">❝</div>
+                    <p>"Oduševljeni smo! Disco party je bio pravi hit. Teta čuvalica je bila divna prema najmlađima. Topla preporuka svima."</p>
+                    <h4>- Mama Ivana</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pravilnik" class="rules">
+        <div class="container">
+            <h2>Pravilnik Jogice</h2>
+            <p>Kako bismo osigurali ugodno okruženje, molimo vas da se pridržavate sljedećih pravila:</p>
+            
+            <div class="rule-list">
+                <details>
+                    <summary>1. Sigurnost i odgovornost</summary>
+                    <p>Roditelji/skrbnici su odgovorni za svoju djecu tijekom boravka u igraonici. Jogica ne preuzima odgovornost za eventualne ozljede.</p>
+                </details>
+                <details>
+                    <summary>2. Djeca mlađa od 3 godine</summary>
+                    <p>Djeca mlađa od 3 godine ne mogu boraviti u igraonici bez pratnje roditelja ili druge odrasle osobe.</p>
+                </details>
+                <details>
+                    <summary>3. Obuća i higijena</summary>
+                    <p>Ulazak je moguć isključivo bez obuće (obavezne čarapice/papučice). Molimo pazite na osobnu higijenu i zdravlje.</p>
+                </details>
+                <details>
+                    <summary>4. Igračke</summary>
+                    <p>Igračke se ne smiju iznositi van. Molimo ne donositi vlastite igračke radi sigurnosti i mogućih oštećenja.</p>
+                </details>
+                <details>
+                    <summary>5. Oprema i inventar</summary>
+                    <p>Molimo čuvajte opremu. Namjerno oštećenje može rezultirati naknadom štete.</p>
+                </details>
+                <details>
+                    <summary>6. Alergije</summary>
+                    <p>Osoblje mora biti obaviješteno o alergijama, ali odgovornost praćenja ostaje na roditeljima.</p>
+                </details>
+                <details>
+                    <summary>7. Hrana i piće</summary>
+                    <p>Konzumacija je dozvoljena samo na predviđenim mjestima.</p>
+                </details>
+                <details>
+                    <summary>8. Fotografiranje</summary>
+                    <p>Fotografiranje tuđe djece samo uz suglasnost. Promotivne fotografije Jogice štite identitet djece.</p>
+                </details>
+                <details>
+                    <summary>9. Zdravlje djece</summary>
+                    <p>Molimo ne dovodite bolesnu djecu (temperatura, osip, zarazne bolesti) radi zaštite drugih.</p>
+                </details>
+            </div>
+            <p style="text-align: center; margin-top: 1rem;">💛 Hvala vam što doprinosite sigurnoj i veseloj atmosferi!</p>
+        </div>
+    </section>
+
+    <footer id="kontakt">
+        <div class="custom-shape-divider-top-1">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Kontakt</h3>
+                <p>📍 Vojakovačka 39, Gajevo (Zagreb)</p>
+                <p>📞 <a href="tel:09151419526">091 5141 9526</a></p>
+                <p>📧 <a href="mailto:jogica.rodjendani@gmail.com">jogica.rodjendani@gmail.com</a></p>
+                <div class="socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+            <div class="location">
+                <h3>Gdje smo</h3>
+                <p>Nalazimo se u neposrednoj blizini Srednjaka, Staglišća i Jaruna.</p>
+                <p>Parking se ne naplaćuje (Vojakovačka, Predovečka).</p>
+                <!-- Google Maps Embed Placeholder -->
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps?q=Vojakovačka+39,+Zagreb&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <!-- Payment Methods Placeholder -->
+                 <div style="margin-top: 1rem;">
+                    <h3>Načini plaćanja</h3>
+                    <p>Gotovina, Transakcijski račun (U pripremi)</p>
+                 </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Jogica Rođendaonica. Sva prava pridržana.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">⬆️</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
