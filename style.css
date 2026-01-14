@@ -733,24 +733,28 @@ header { z-index: 1000; }
     }
     
     .footer-content { 
-        grid-template-columns: 1fr; 
-        text-align: center; 
-        gap: 2rem; 
-        padding-top: 2rem; /* Content starts sooner since wave is smaller */
-        padding-bottom: 3rem;
+        display: flex; /* Switch to flex column for better stacking control */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+        padding-top: 3rem; 
+        padding-bottom: 2rem;
+    }
+    
+    .contact-info, .location {
+        width: 100%; /* Full width for centering content */
     }
     
     .socials { 
         justify-content: center; 
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 
-    .contact-info p, .location p {
-        justify-content: center;
-    }
-    
     .map-placeholder {
-        margin: 0 auto; /* Center map */
+        margin: 0 auto;
+        max-width: 100%;
     }
 }
 
