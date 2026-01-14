@@ -728,20 +728,29 @@ header { z-index: 1000; }
     .package-card:nth-child(3) { transform: scale(1); margin: 0; box-shadow: none; border: 3px solid var(--color-secondary-dark); }
     
     /* Footer Mobile Optimization */
+    .custom-shape-divider-top-1 svg { 
+        height: 50px; /* Less spiky wave */
+    }
+    
     .footer-content { 
         grid-template-columns: 1fr; 
         text-align: center; 
-        gap: 3rem; 
-        padding: 3rem 1.5rem 2rem 1.5rem; /* Increased top padding to clear wave better */
+        gap: 2rem; 
+        padding-top: 2rem; /* Content starts sooner since wave is smaller */
+        padding-bottom: 3rem;
     }
     
     .socials { 
         justify-content: center; 
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
-    .contact-info p {
+    .contact-info p, .location p {
         justify-content: center;
+    }
+    
+    .map-placeholder {
+        margin: 0 auto; /* Center map */
     }
 }
 
