@@ -16,7 +16,7 @@
     --radius-md: 12px;
     
     /* Typography */
-    --font-heading: 'Fredoka', cursive;
+    --font-heading: 'Fredoka', 'Quicksand', sans-serif;
     --font-body: 'Quicksand', sans-serif;
 }
 
