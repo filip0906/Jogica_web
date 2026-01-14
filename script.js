@@ -169,4 +169,25 @@ document.addEventListener('DOMContentLoaded', () => {
         window.requestAnimationFrame(step);
     }
 
+    // 5. Cookie Consent Logic 🍪
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
+
+    // Check if user has already accepted
+    if (!localStorage.getItem('cookiesAccepted')) {
+        // Wait a bit before showing to not be annoying immediately
+        setTimeout(() => {
+            cookieBanner.classList.add('show');
+        }, 1000);
+    }
+
+    if(acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            // Save preference
+            localStorage.setItem('cookiesAccepted', 'true');
+            // Hide banner
+            cookieBanner.classList.remove('show');
+        });
+    }
+
 });
