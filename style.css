@@ -35,11 +35,11 @@ html {
 
 body {
     font-family: var(--font-body);
-    /* Gradient Background - Baby Blue to Baby Rose */
-    background: linear-gradient(135deg, #E0F2F1 0%, #89CFF0 20%, #BDE0FE 40%, #FFC4D6 60%, #FF9EAA 80%, #FFF0F5 100%);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    will-change: background-position; /* Hint for browser performance */
+    /* Dynamic Candy Gradient - Matching the cheerful logo colors */
+    background: linear-gradient(300deg, #FF9EAA, #FFD54F, #81C784, #89CFF0, #BA68C8);
+    background-size: 300% 300%;
+    animation: gradientBG 20s ease infinite;
+    will-change: background-position;
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
@@ -727,9 +727,22 @@ header { z-index: 1000; }
     /* Reset Featured Card Scale */
     .package-card:nth-child(3) { transform: scale(1); margin: 0; box-shadow: none; border: 3px solid var(--color-secondary-dark); }
     
-    /* Footer */
-    .footer-content { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
-    .socials { justify-content: center; }
+    /* Footer Mobile Optimization */
+    .footer-content { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 3rem; 
+        padding: 3rem 1.5rem 2rem 1.5rem; /* Increased top padding to clear wave better */
+    }
+    
+    .socials { 
+        justify-content: center; 
+        margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
 }
 
 /* Footer Layout Details */
