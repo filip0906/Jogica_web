@@ -701,6 +701,36 @@ header { z-index: 1000; }
     box-shadow: 0 15px 40px rgba(137, 207, 240, 0.4);
 }
 
+
+/* Footer Layout Details */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 15px;
+}
+
+.socials a {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: var(--radius-md);
+    transition: 0.3s;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
 /* Mobile Adjustments for Readability & Layout */
 @media (max-width: 768px) {
     /* Header Compactness */
@@ -756,35 +786,6 @@ header { z-index: 1000; }
         margin: 0 auto;
         max-width: 100%;
     }
-}
-
-/* Footer Layout Details */
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding-bottom: 2rem;
-}
-
-.socials {
-    margin-top: 1rem;
-    display: flex;
-    gap: 15px;
-}
-
-.socials a {
-    background: rgba(255,255,255,0.2);
-    padding: 8px 15px;
-    border-radius: var(--radius-md);
-    transition: 0.3s;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.9rem;
-    opacity: 0.7;
 }
 
 /* Confetti Animation */
