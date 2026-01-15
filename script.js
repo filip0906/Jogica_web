@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 10000); // Match CSS animation duration
     }
 
-    // Spawn a balloon every 1000ms (Slower for performance)
-    setInterval(spawnBalloon, 1000);
+    // Spawn a balloon every 300ms
+    setInterval(spawnBalloon, 300);
 
     // 2. Confetti Cannon (Shoots on load and scroll)
     function fireConfetti() {
@@ -191,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 6. Scroll Reveal Animation Logic ✨
-    const revealElements = document.querySelectorAll("section, h2, .package-card, .service-item, .testimonial-card, .gallery-item");
+    // Removed .package-card from animation list as requested
+    const revealElements = document.querySelectorAll("section, h2, .service-item, .testimonial-card, .gallery-item");
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

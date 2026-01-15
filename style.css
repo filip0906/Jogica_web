@@ -263,11 +263,15 @@ nav a.active-link {
     padding: 2.5rem;
     position: relative;
     border: 3px solid #F0F0F0;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition removed to stop animation */
+    height: 100%; /* Ensure full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will help align content if needed too */
 }
 
 .package-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    /* transform removed to stop movement */
     border-color: var(--color-accent);
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
@@ -275,13 +279,14 @@ nav a.active-link {
 /* Unique colors for cards using nth-child */
 .package-card:nth-child(1) { border-color: var(--color-secondary); background: #F0F8FF; } /* Blue */
 .package-card:nth-child(2) { border-color: var(--color-primary); background: #FFF0F5; } /* Rose */
-.package-card:nth-child(3) { border-color: var(--color-secondary-dark); background: #E6F3FF; transform: scale(1.05); z-index: 10; } /* Featured Blue */
+.package-card:nth-child(3) { border-color: var(--color-secondary-dark); background: #E6F3FF; } /* Featured Blue - Scaled removed */
 .package-card:nth-child(4) { border-color: var(--color-primary-dark); background: #FFF5F7; } /* Rose */
 .package-card:nth-child(5) { border-color: var(--color-accent); background: #F0FBFF; } /* Light Blue */
 
 .package-card h3 {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .package-card .price {
@@ -526,8 +531,8 @@ select, input[type="number"] {
 }
 
 .rules-intro {
-    text-align: center;
-    font-size: 1.25rem; /* Larger text */
+    text-align: left;
+    font-size: 1rem; /* Smaller text as requested */
     max-width: 800px;
     margin: 0 auto 3rem auto; /* Centered with generous bottom spacing */
     color: var(--color-text-light);
@@ -712,7 +717,7 @@ header { z-index: 1000; }
 .packages-grid {
     gap: 3.5rem; /* Increased gap */
     padding: 2rem 1rem 6rem; /* More bottom padding for safety */
-    align-items: center; /* Vertically center cards */
+    align-items: stretch; /* Cards will have same height */
 }
 
 .package-card {
@@ -722,7 +727,8 @@ header { z-index: 1000; }
     flex-direction: column;
 }
 
-/* Featured card scaling fix */
+/* Featured card scaling fix - REMOVED for uniformity */
+/*
 .package-card:nth-child(3) { 
     transform: scale(1.08); 
     z-index: 20;
@@ -733,6 +739,7 @@ header { z-index: 1000; }
     transform: translateY(-10px) scale(1.12);
     box-shadow: 0 25px 50px rgba(137, 207, 240, 0.6);
 }
+*/
 
 
 /* Footer Layout Details */
