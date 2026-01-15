@@ -190,4 +190,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 6. Scroll Reveal Animation Logic ✨
+    const revealElements = document.querySelectorAll("section, h2, .package-card, .service-item, .testimonial-card, .gallery-item");
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: Stop observing once revealed to only animate once
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.15, // Trigger when 15% visible
+        rootMargin: "0px"
+    });
+
+    revealElements.forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+    });
+
 });
