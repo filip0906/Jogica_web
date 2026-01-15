@@ -996,3 +996,189 @@ header { z-index: 1000; }
 .service-item:nth-child(2).reveal { transition-delay: 0.2s; }
 .service-item:nth-child(3).reveal { transition-delay: 0.3s; }
 .service-item:nth-child(4).reveal { transition-delay: 0.4s; }
+
+/* --- PREMIUM CAKE ANIMATION 🎂 --- */
+.cake-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 10px auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    transform: scale(0.9); /* Slight adjustment */
+}
+
+/* Plate */
+.cake-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 15px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 0;
+}
+
+/* Cake Body */
+.cake {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 140px;
+    background: var(--color-primary);
+    border-radius: 15px 15px 10px 10px;
+    box-shadow: 
+        inset -15px 0 0 rgba(0,0,0,0.05), /* Side shadow */
+        inset 0 -40px 0 rgba(0,0,0,0.03); /* Bottom shading */
+    z-index: 1;
+    overflow: visible;
+}
+
+/* Cake Layers (Filling) */
+.cake::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Dripping Icing */
+.icing {
+    position: absolute;
+    top: -15px;
+    left: -5px;
+    width: 210px;
+    height: 60px;
+    background: var(--color-secondary);
+    border-radius: 20px 20px 10px 10px;
+    z-index: 2;
+}
+
+/* Drips */
+.icing::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: radial-gradient(circle at 15px 0, var(--color-secondary) 15px, transparent 16px);
+    background-size: 40px 30px; /* Repeat pattern */
+    background-repeat: repeat-x;
+}
+
+.icing::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 190px;
+    height: 15px;
+    background: rgba(255,255,255,0.2); /* Highlight on icing */
+    border-radius: 10px;
+}
+
+/* Candles */
+.candle {
+    position: absolute;
+    bottom: 135px; /* Stick out of icing */
+    width: 16px;
+    height: 60px;
+    background: repeating-linear-gradient(45deg, #FFF, #FFF 5px, #FFEB3B 5px, #FFEB3B 10px);
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    z-index: 3;
+}
+
+.candle-1 { left: 50px; transform: rotate(-5deg); height: 50px; background: repeating-linear-gradient(45deg, #FFF, #FFF 5px, #FF9EAA 5px, #FF9EAA 10px); }
+.candle-2 { left: 92px; height: 65px; bottom: 140px; background: repeating-linear-gradient(-45deg, #FFF, #FFF 5px, #81C784 5px, #81C784 10px); z-index: 4; }
+.candle-3 { left: 134px; transform: rotate(5deg); height: 50px; background: repeating-linear-gradient(45deg, #FFF, #FFF 5px, #BA68C8 5px, #BA68C8 10px); }
+
+/* Wicks */
+.candle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 8px;
+    background: #333;
+}
+
+/* Realistic Flame */
+.flame {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 22px;
+    background: radial-gradient(ellipse at bottom, #FFD700 0%, #FF8C00 60%, transparent 100%);
+    border-radius: 50% 50% 20% 20%;
+    filter: blur(0.5px);
+    animation: flicker 1s infinite alternate ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+}
+
+.flame::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+
+@keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+    100% { transform: translateX(-50%) scale(1.1, 1.05) rotate(2deg); opacity: 1; box-shadow: 0 0 15px rgba(255, 140, 0, 0.8); }
+}
+
+/* Decor - Cherries & Sprinkles */
+.cake-decor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.cherry {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: radial-gradient(circle at 30% 30%, #FF5252, #B71C1C);
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.cherry::after {
+    content: ''; /* Stem */
+    position: absolute;
+    top: -8px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #5D4037;
+    border-radius: 50%;
+    transform: rotate(25deg);
+}
+
+.c1 { bottom: 125px; left: 25px; }
+.c2 { bottom: 125px; right: 25px; }
+.c3 { bottom: 135px; left: 75px; transform: scale(0.8); z-index: 1;} 
+
+
