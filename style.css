@@ -289,7 +289,10 @@ nav a.active-link {
     font-size: 2.5rem;
     color: var(--color-text);
     margin-bottom: 1.5rem;
-    display: inline-block;
+    display: block; /* Changed for centering */
+    width: fit-content; /* Ensure background only covers text */
+    margin-left: auto; /* Center horizontal */
+    margin-right: auto; /* Center horizontal */
     padding: 5px 15px;
     background: rgba(255,255,255,0.5);
     border-radius: var(--radius-lg);
@@ -459,6 +462,7 @@ select, input[type="number"] {
     color: var(--color-text);
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    margin-top: 3rem; /* Increased spacing for quote icon to start line lower */
 }
 
 .testimonial-card h4 {
@@ -511,10 +515,25 @@ select, input[type="number"] {
     margin-bottom: 1rem;
 }
 
+/* Additional spacing section titles */
+#igraonica, #o-nama {
+    padding-top: 5rem;
+}
+
 /* --- RULES --- */
 .rules {
     padding: 4rem 0 12rem 0; /* Extra bottom padding to prevent overlap with wave footer */
 }
+
+.rules-intro {
+    text-align: center;
+    font-size: 1.25rem; /* Larger text */
+    max-width: 800px;
+    margin: 0 auto 3rem auto; /* Centered with generous bottom spacing */
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
 .rule-list {
     background: #FFF;
     border-radius: var(--radius-xl);
