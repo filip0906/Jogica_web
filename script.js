@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 10000); // Match CSS animation duration
     }
 
-    // Spawn a balloon every 300ms (Much faster = MORE balloons!)
-    setInterval(spawnBalloon, 300);
+    // Spawn a balloon every 1000ms (Slower for performance)
+    setInterval(spawnBalloon, 1000);
 
     // 2. Confetti Cannon (Shoots on load and scroll)
     function fireConfetti() {
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fire confetti on load
     setTimeout(fireConfetti, 500);
     
-    // Fire confetti every 5 seconds (Background Party Mode)
-    setInterval(fireConfetti, 5000);
+    // Auto-fire confetti removed for performance
+    // setInterval(fireConfetti, 5000);
 
     // Fire confetti when clicking the CTA button
     const btn = document.querySelector('.btn');
