@@ -1189,3 +1189,5 @@ header { z-index: 1000; }
 .c3 { bottom: 135px; left: 75px; transform: scale(0.8); z-index: 1;} 
 
 
+
+.card-logo { display: block; max-height: 80px; margin: 0 auto 0.5rem auto; object-fit: contain; }
