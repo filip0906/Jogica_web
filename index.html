@@ -313,26 +313,69 @@
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Što kažu roditelji?</h2>
+            
+            <div class="google-rating-summary" style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    5.0 <span style="font-size: 1.5rem; color: #fbbc04;">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p style="color: var(--color-text-light);">bazirano na recenzijama na Googleu</p>
+                <a href="https://www.google.com/search?q=Jogica+Ro%C4%91endaonica+reviews" target="_blank" class="btn" style="margin-top: 10px; font-size: 0.9rem; padding: 10px 20px; background-color: #fff; color: #333; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="20" height="20" alt="Google">
+                    Napiši recenziju
+                </a>
+            </div>
+
             <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p>"Najbolji rođendan do sada! Animatorice su bile odlične, djeca se nisu prestala smijati puna 2 sata. Svakako se vraćamo!"</p>
-                    <h4>- Mama Ana</h4>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                <!-- Mario Piria -->
+                <div class="testimonial-card google-card">
+                    <div class="review-header">
+                        <div class="author-avatar" style="background: #1e8e3e; color: white;">M</div>
+                        <div class="author-info">
+                            <span class="author-name">Mario P.</span>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="g-logo" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="stars" style="color: #fbbc04; margin: 10px 0;">⭐⭐⭐⭐⭐ <span style="font-size: 0.8rem; color: #777; font-weight: normal; margin-left: 5px;">prije 5 dana</span></div>
+                    <p>"Igraonica je super opremljena sadržajima za djecu i poticajna za igru i zabavu. Animatorice odlične. Vidim na netu da uz rođendane imaju i drugih evenata i radionica. Svakako preporučam."</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p>"Prekrasno uređen prostor i jako ugodna atmosfera. Sportski paket je bio pun pogodak za naše dečke. Sve pohvale!"</p>
-                    <h4>- Tata Marko</h4>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
+
+                <!-- Anja Lordanić -->
+                <div class="testimonial-card google-card">
+                    <div class="review-header">
+                        <div class="author-avatar" style="background: #8e24aa; color: white;">A</div>
+                        <div class="author-info">
+                            <span class="author-name">Anja L.</span>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="g-logo" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="stars" style="color: #fbbc04; margin: 10px 0;">⭐⭐⭐⭐⭐ <span style="font-size: 0.8rem; color: #777; font-weight: normal; margin-left: 5px;">prije 6 dana</span></div>
+                    <p>"Nedavno smo bili u Jogici na dječjem rođendanu i oduševljeni smo prostorom; ima sve što djeci treba, a mi, roditelji, bili smo mirni jer su o njima brinule odlične animatorice. Tople preporuke. 👏🏽"</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p>"Oduševljeni smo! Disco party je bio pravi hit. Teta čuvalica je bila divna prema najmlađima. Topla preporuka svima."</p>
-                    <h4>- Mama Ivana</h4>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
+
+                <!-- Sara Livaić Diminić -->
+                <div class="testimonial-card google-card">
+                    <div class="review-header">
+                        <div class="author-avatar" style="background: #fb8c00; color: white;">S</div>
+                        <div class="author-info">
+                            <span class="author-name">Sara L. D.</span>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="g-logo" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="stars" style="color: #fbbc04; margin: 10px 0;">⭐⭐⭐⭐⭐ <span style="font-size: 0.8rem; color: #777; font-weight: normal; margin-left: 5px;">prije tjedan dana</span></div>
+                    <p>"Jako lijepo i uredno, svi se trude, a djeca izlaze iz igraonice sretna i jedva cekaju vratiti se 🤸🏻‍♂️"</p>
                 </div>
             </div>
+            
+            <style>
+                .google-card { text-align: left; padding: 20px; border: 1px solid #e0e0e0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+                .review-header { display: flex; align-items: center; gap: 15px; position: relative; }
+                .author-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
+                .author-info { display: flex; flex-direction: column; }
+                .author-name { font-weight: 700; color: #202124; font-size: 0.95rem; }
+                .author-meta { font-size: 0.75rem; color: #70757a; }
+                .g-logo { position: absolute; top: 0; right: 0; opacity: 0.7; }
+                .testimonial-card p { font-style: normal; margin-top: 10px; color: #4d4d4d; font-size: 0.95rem; line-height: 1.5; }
+            </style>
         </div>
     </section>
 
