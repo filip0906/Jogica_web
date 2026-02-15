@@ -195,21 +195,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Scroll Reveal Animation Logic ✨
     // Removed .package-card from animation list as requested
     // Removed .gallery-item to prevent visibility issues on mobile
-    // Excluded .gallery section to ensure images are always visible
-    const revealElements = document.querySelectorAll("section:not(.gallery), h2, .service-item, .testimonial-card");
+    // Optimized for Mobile: Animate inner elements instead of whole sections to improve perceived load speed
+    const revealElements = document.querySelectorAll("h2, .package-card, .service-item, .testimonial-card, .hero-content, .about-content, .rules-list");
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: Stop observing once revealed to only animate once
                 observer.unobserve(entry.target);
             }
         });
     }, {
         root: null,
-        threshold: 0.15, // Trigger when 15% visible
-        rootMargin: "0px"
+        threshold: 0.1, // Trigger earlier (10%)
+        rootMargin: "0px 0px -50px 0px" // Offset slightly to trigger before fully in view
     });
 
     revealElements.forEach(el => {
