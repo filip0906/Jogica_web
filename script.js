@@ -192,7 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. Scroll Reveal Animation Logic ✨
     // Removed .package-card from animation list as requested
-    const revealElements = document.querySelectorAll("section, h2, .service-item, .testimonial-card, .gallery-item");
+    // Removed .gallery-item to prevent visibility issues on mobile
+    // Excluded .gallery section to ensure images are always visible
+    const revealElements = document.querySelectorAll("section:not(.gallery), h2, .service-item, .testimonial-card");
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -213,4 +215,43 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    // 5. Lightbox Logic (Click to Enlarge)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    if (lightbox) { // Check if lightbox exists on this page
+        // Attach click events to all gallery images (both scroll and grid styles)
+        const allImages = document.querySelectorAll('.gallery-item-scroll img, .gallery-item img');
+
+        allImages.forEach(img => {
+            // Enable pointer events for clicking
+            img.style.pointerEvents = "auto";
+            img.style.cursor = "zoom-in";
+
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = img.alt;
+                // Disable scrolling on body
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close logic
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
 });
