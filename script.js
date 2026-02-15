@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Spawn a balloon every 300ms
     setInterval(spawnBalloon, 300);
 
-    // 2. Confetti Cannon (Shoots on load and scroll)
+    // 2. Confetti Cannon (Removed for performance)
+    /*
     function fireConfetti() {
         const container = document.body;
         const colors = ['#FF9EAA', '#89CFF0', '#FFC4D6', '#BDE0FE', '#FFF'];
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fireConfetti();
         });
     }
+    */
 
     // 3. Scroll To Top Button Logic
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
